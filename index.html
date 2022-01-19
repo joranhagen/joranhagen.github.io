@@ -4,21 +4,32 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <title>my-first-website</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
+  <link href="styles.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
   <div class="header">
     <img src="images/smug_joran_small_square.png">
-    <h1>Welcome to my page!</h1>
-    <p>Scroll down to see what I am about!</p>
   </div>
 
   <div id="navbar">
+    <button class="btn" onclick="openNav()"><i class="fa fa-bars"></i></button>
     <a class="active" href="javascript:void(0)">Home</a>
-    <a href="#news">News</a>
-    <a href="#test">Test</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
   </div>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a class="active" href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </div>
+
+  
 
   <div class="content">
     <p>Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
@@ -60,6 +71,14 @@
       } else {
         navbar.classList.remove("sticky");
       }
+    }
+
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "7em";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
     }
   </script>
 </body>
