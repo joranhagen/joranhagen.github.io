@@ -9,10 +9,6 @@
 </head>
 
 <body>
-  <div class="header">
-    <img src="images/smug_joran_small_square.png">
-  </div>
-
   <div id="navbar">
     <a class="btn" id="active"><i class="fas fa-home"></i> Home</a>
     <a href="/about.html">About</a>
@@ -21,23 +17,8 @@
   </div>
 
   <div class="main">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A placeat culpa, deserunt sed mollitia veniam cupiditate. Velit illo quidem perspiciatis tenetur, omnis vitae necessitatibus, nemo autem ipsa magni minima delectus?</p>
-    <img src="images/geld.png" height="1000px">
+    <img id="background" src="images/Joran_collage.png">
   </div>
 
-  <script>
-    window.onscroll = function() {scrollFunction()};
-
-    var navbar = document.getElementById("navbar");
-    var sticky = navbar.offsetTop;
-
-    function scrollFunction() {
-      if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky");
-      } else {
-        navbar.classList.remove("sticky");
-      }
-    }
-  </script>
 </body>
 </html>
